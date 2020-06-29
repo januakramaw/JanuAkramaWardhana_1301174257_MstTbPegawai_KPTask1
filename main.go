@@ -7,8 +7,6 @@ import (
 	"log"
 	"net/http"
 
-	// fn "projectkp/functionProj"
-
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/gorilla/mux"
 )
@@ -349,6 +347,7 @@ func main() {
 	r.HandleFunc("/UpdatePegawai/{id}", updatePegawai).Methods("PUT")
 	r.HandleFunc("/getByIDnSCH", getPostByIDnSchID).Methods("POST")
 
-	//server start
+	//server starting
 	log.Fatal(http.ListenAndServe(":8080", r))
+
 }
